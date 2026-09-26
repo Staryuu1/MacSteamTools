@@ -75,7 +75,6 @@ Setting ini dapat dilihat di **winecfg → Libraries**. Tombol **Periksa** di Se
 - `files.json` memetakan file tujuan ke salinan lama untuk pemulihan manual
 - DLL divalidasi header MZ sebelum dipasang
 - Instalasi Lua divalidasi App ID sebelum disimpan
-- Tidak ada koneksi tersembunyi — semua unduhan dilakukan secara eksplisit dan ditampilkan ke pengguna
 
 ---
 

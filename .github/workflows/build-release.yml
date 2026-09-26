@@ -1,0 +1,44 @@
+name: Build and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., 1.0.0)'
+        required: true
+        default: '1.0.0'
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Xcode / Swift
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Build Application
+        run: |
+          chmod +x scripts/build.sh
+          bash scripts/build.sh
+
+      - name: Package App to ZIP
+        run: |
+          cd dist
+          ditto -c -k --keepParent MacSteamTools.app MacSteamTools-${{ github.event.inputs.version }}.zip
+
+      - name: Create Release and Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.event.inputs.version }}
+          name: MacSteamTools v${{ github.event.inputs.version }}
+          draft: false
+          prerelease: false
+          files: dist/MacSteamTools-${{ github.event.inputs.version }}.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

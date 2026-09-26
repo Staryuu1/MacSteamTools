@@ -75,7 +75,7 @@ These settings can be viewed in **winecfg → Libraries**. The **Check status** 
 - `files.json` maps destination files to their old copies for manual recovery
 - DLLs are validated for MZ headers before installation
 - Lua installations are validated for App ID before being saved
-- No hidden connections — all downloads are performed explicitly and shown to the user
+
 
 ---
 
