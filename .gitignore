@@ -1,0 +1,33 @@
+# Swift build artifacts
+.build/
+*.o
+*.d
+*.swp
+
+# App bundle output
+dist/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode (jika dipakai)
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+
+# Icon build artifacts (diregenerasi oleh script)
+# AppIcon.icns tidak di-ignore karena akan dilacak
+
+# Language cache (source of truth adalah Language/ folder)
+*.lproj/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
