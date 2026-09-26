@@ -73,7 +73,6 @@ Setting ini dapat dilihat di **winecfg → Libraries**. Tombol **Periksa** di Se
 
 - Setiap instalasi DLL atau Lua membuat backup otomatis di `Steam/MacSteamTools Backups/<ID>/`
 - `files.json` memetakan file tujuan ke salinan lama untuk pemulihan manual
-- DLL divalidasi header MZ sebelum dipasang
 - Instalasi Lua divalidasi App ID sebelum disimpan
 
 ---

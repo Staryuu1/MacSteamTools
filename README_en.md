@@ -73,7 +73,6 @@ These settings can be viewed in **winecfg → Libraries**. The **Check status** 
 
 - Every DLL or Lua installation creates an automatic backup in `Steam/MacSteamTools Backups/<ID>/`
 - `files.json` maps destination files to their old copies for manual recovery
-- DLLs are validated for MZ headers before installation
 - Lua installations are validated for App ID before being saved
 
 
